@@ -4,7 +4,9 @@
 
 This was a project I did in the summer of 2025. I was looking for a solution to load balance ingress SSL-VPN connections between 2 Fortigate firewalls, and ended up building this as a proof of concept. At the time, this project was well outside of my comfort zone, and I really enjoyed learning about these concepts.
 
-Initially I started out using a single HAProxy node to load balance the traffic, but quickly realized that a single point of failure can defeat the entire point of load balancing. I implemented Keepalived to make the setup more resistant to failure. The end result was a 2 node active-passive HAProxy configuration, utilizing a floating Virtual IP (via Keepalived) between them, and ingress VPN connections load balanced between the 2 firewalls. 
+Initially I started out using a single HAProxy node to load balance the traffic, but quickly realized that a single point of failure can defeat the entire point of load balancing. I implemented Keepalived to make the setup more resistant to failure. The end result was a 2 node active-passive HAProxy configuration, utilizing a floating Virtual IP (via Keepalived) between them, and ingress VPN connections load balanced between the 2 firewalls. Below is a diagram depicting the final architecture.
+
+![Project Architecture Overview](images/haproxy-arch.png)
 
 ---
 
