@@ -1,0 +1,6 @@
+---
+- name: Deploy Idle Shutdown Service and Script to Linux machines
+  hosts: linux_machines
+  become: true
+  roles:
+    - idleshut

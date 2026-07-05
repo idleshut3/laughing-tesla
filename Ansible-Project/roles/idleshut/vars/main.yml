@@ -1,0 +1,4 @@
+---
+
+script_dest_path: "/usr/local/bin/idleshutdown.sh"
+service_dest_path: "/etc/systemd/system/idleshutdown.service"
